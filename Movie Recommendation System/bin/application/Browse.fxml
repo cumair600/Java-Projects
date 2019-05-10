@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1550.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BrowseController">
+   <children>
+      <SplitPane fx:id="splitPane" layoutX="-2.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="856.0" prefWidth="1554.0" style="-fx-background-color: black; -fx-border-color: red;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="116.0" fitWidth="110.0" layoutX="96.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/hciLogo.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="255.0" layoutY="31.0" text="KS OMK">
+                     <font>
+                        <Font name="System Bold" size="61.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#edb529" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <JFXButton fx:id="btnLogOut" buttonType="RAISED" layoutX="1389.0" layoutY="53.0" onAction="#onClickLogOut" ripplerFill="#f2bb2f" style="-fx-background-color: RED; -fx-background-radius: 5em;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField layoutX="915.0" layoutY="60.0" prefHeight="34.0" prefWidth="275.0" promptText="Search Movies">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TextField>
+                  <Pane layoutX="-4.0" layoutY="149.0" prefHeight="5.0" prefWidth="1558.0" style="-fx-background-color: red;" />
+                  <Label fx:id="closeButton" layoutX="1523.0" layoutY="3.0" onMouseClicked="#onClickClose" text="X" textFill="RED">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton fx:id="btnNightMode" layoutX="683.0" layoutY="47.0" onAction="#onClickNightMode" text="Night Mode" textFill="GOLD" toggleColor="#ff0900" toggleLineColor="GOLD" unToggleColor="RED" unToggleLineColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXToggleButton>
+                  <AnchorPane fx:id="anchorPane1" layoutX="142.0" layoutY="247.0" prefHeight="231.0" prefWidth="1280.0" style="-fx-background-color: Black; -fx-border-color: REd;">
+                     <children>
+                        <AnchorPane fx:id="newMoviePane1" layoutX="40.0" layoutY="13.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <Label fx:id="m1" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y1" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXCheckBox fx:id="f1" checkedColor="RED" layoutX="103.0" layoutY="171.0" onAction="#onClickFav1" text="Favorite" textFill="GOLD" unCheckedColor="GOLD">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <ImageView fx:id="i1" fitHeight="129.0" fitWidth="175.0" layoutX="5.0" layoutY="7.0" onMouseClicked="#onClicki1" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/got.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="newMoviePane2" layoutX="286.0" layoutY="13.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i2" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki2" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/starwars.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m2" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y2" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXCheckBox fx:id="f2" checkedColor="RED" layoutX="103.0" layoutY="171.0" onAction="#onClickFav2" text="Favorite" textFill="GOLD" unCheckedColor="GOLD">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXCheckBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="newMoviePane3" layoutX="533.0" layoutY="13.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i3" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki3" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/50shades.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m3" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y3" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXCheckBox fx:id="f3" checkedColor="RED" layoutX="103.0" layoutY="171.0" onAction="#onClickFav3" text="Favorite" textFill="GOLD" unCheckedColor="GOLD">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXCheckBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="newMoviePane4" layoutX="784.0" layoutY="12.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i4" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki4" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/avatar.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m4" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y4" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXCheckBox fx:id="f4" checkedColor="RED" layoutX="103.0" layoutY="171.0" onAction="#onClickFav4" text="Favorite" textFill="GOLD" unCheckedColor="GOLD">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXCheckBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="newMoviePane5" layoutX="1036.0" layoutY="12.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i5" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki5" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/avengers.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m5" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y5" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXCheckBox fx:id="f5" checkedColor="RED" layoutX="103.0" layoutY="171.0" onAction="#onClickFav5" text="Favorite" textFill="GOLD" unCheckedColor="GOLD">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXCheckBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="169.0" layoutY="196.0" text="New Releases" textFill="GOLD">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="168.0" layoutY="507.0" text="Recommended for you" textFill="GOLD">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnPrev" buttonType="RAISED" layoutX="79.0" layoutY="334.0" onAction="#onClickPrev" style="-fx-background-color: red; -fx-background-radius: 5em; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 13px; -fx-max-height: 13px;" text="&lt;" textFill="GOLD">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="642.0" style="-fx-background-color: red; -fx-background-radius: 5em; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 13px; -fx-max-height: 13px;" text="&lt;" textFill="GOLD">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnNext" buttonType="RAISED" layoutX="1431.0" layoutY="333.0" onAction="#onClickNext" style="-fx-background-color: red; -fx-background-radius: 5em; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 13px; -fx-max-height: 13px;" text="&gt;" textFill="GOLD">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="1429.0" layoutY="650.0" style="-fx-background-color: red; -fx-background-radius: 5em; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 13px; -fx-max-height: 13px;" text="&gt;" textFill="GOLD">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnFav" buttonType="RAISED" layoutX="1215.0" layoutY="54.0" onAction="#onClickFav" prefHeight="42.0" prefWidth="152.0" ripplerFill="#f2bb2f" style="-fx-background-color: Gold; -fx-background-radius: 5em;" text="My Favorites" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="1226.0" layoutY="117.0" text="Welcome : " textFill="GOLD">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtName" layoutX="1308.0" layoutY="117.0" text="User" textFill="GOLD">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="anchorPane2" layoutX="142.0" layoutY="557.0" prefHeight="231.0" prefWidth="1280.0" style="-fx-background-color: Black; -fx-border-color: REd;">
+                     <children>
+                        <AnchorPane fx:id="recMoviePane1" layoutX="40.0" layoutY="13.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i6" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki6" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/got.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m6" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y6" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="recMoviePane2" layoutX="286.0" layoutY="13.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i7" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki7" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/despicable.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m7" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y7" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="recMoviePane3" layoutX="533.0" layoutY="13.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i8" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki8" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/fallout.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m8" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y8" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="recMoviePane4" layoutX="784.0" layoutY="12.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i9" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki9" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/final.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m9" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y9" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="recMoviePane5" layoutX="1036.0" layoutY="12.0" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: Black; -fx-border-color: red;">
+                           <children>
+                              <ImageView fx:id="i10" fitHeight="126.0" fitWidth="165.0" layoutX="11.0" layoutY="9.0" onMouseClicked="#onClicki10" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/avengers.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="m10" layoutX="10.0" layoutY="140.0" prefHeight="28.0" prefWidth="177.0" text="Movie Name" textFill="GOLD">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="y10" layoutX="13.0" layoutY="170.0" text="Year" textFill="GOLD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="noRecPane" layoutX="8.0" layoutY="6.0" prefHeight="207.0" prefWidth="1225.0" style="-fx-background-color: Black;">
+                           <children>
+                              <Label layoutX="451.0" layoutY="77.0" text="No Recommendations yet." textFill="RED">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <StackPane fx:id="stackPane" layoutX="545.0" layoutY="399.0" prefHeight="150.0" prefWidth="367.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

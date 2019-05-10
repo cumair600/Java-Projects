@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1550.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+   <children>
+      <Label fx:id="closeButton" layoutX="1519.0" layoutY="1.0" onMouseClicked="#onClickClose" text="X" textFill="RED">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Pane layoutY="-4.0" prefHeight="854.0" prefWidth="243.0" style="-fx-background-color: red;">
+         <children>
+            <ImageView fitHeight="211.0" fitWidth="275.0" layoutX="31.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/hciLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="335.0" layoutY="61.0" text="Add a new Movie" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="680.0" layoutY="170.0" prefHeight="34.0" prefWidth="325.0" promptText="Movie Name">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtYear" layoutX="680.0" layoutY="240.0" prefHeight="34.0" prefWidth="325.0" promptText="Release Year">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtLength" layoutX="680.0" layoutY="310.0" prefHeight="34.0" prefWidth="325.0" promptText="Movie Length">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtGenre" layoutX="680.0" layoutY="380.0" prefHeight="34.0" prefWidth="325.0" promptText="Genre e.g (Action,Thriller)">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCast" layoutX="680.0" layoutY="450.0" prefHeight="34.0" prefWidth="325.0" promptText="Cast e.g (Brad Pitt, Angelina Jolie)">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtImage" layoutX="680.0" layoutY="520.0" prefHeight="34.0" prefWidth="325.0" promptText="Image path">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="txtDescription" layoutX="680.0" layoutY="580.0" prefHeight="147.0" prefWidth="325.0" promptText="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextArea>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="794.0" layoutY="754.0" onAction="#onClickAdd" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: Red; -fx-background-radius: 5em;" text="Add" textFill="#fdfdfd">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <StackPane fx:id="stackPane" layoutX="646.0" layoutY="330.0" prefHeight="126.0" prefWidth="385.0" />
+      <Label fx:id="txtError" layoutX="1045.0" layoutY="672.0" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="bnLogout" buttonType="RAISED" layoutX="1314.0" layoutY="75.0" onAction="#onClickLogout" style="-fx-background-color: red;" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
